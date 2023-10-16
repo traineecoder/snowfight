@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MoanShoot.mp3-283a91bd9cc1e5d03dc07b1f8630e18d.mp3str"
+
+[deps]
+
+source_file="res://audio/MoanShoot.mp3"
+dest_files=[ "res://.import/MoanShoot.mp3-283a91bd9cc1e5d03dc07b1f8630e18d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

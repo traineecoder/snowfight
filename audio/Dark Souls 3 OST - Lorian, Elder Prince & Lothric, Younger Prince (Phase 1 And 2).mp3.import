@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dark Souls 3 OST - Lorian, Elder Prince & Lothric, Younger Prince (Phase 1 And 2).mp3-07ffac106d017f0d51b7fd2d3b56ccab.mp3str"
+
+[deps]
+
+source_file="res://audio/Dark Souls 3 OST - Lorian, Elder Prince & Lothric, Younger Prince (Phase 1 And 2).mp3"
+dest_files=[ "res://.import/Dark Souls 3 OST - Lorian, Elder Prince & Lothric, Younger Prince (Phase 1 And 2).mp3-07ffac106d017f0d51b7fd2d3b56ccab.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

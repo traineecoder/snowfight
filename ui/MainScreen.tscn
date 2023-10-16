@@ -1,0 +1,146 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://ui/MainScreen/buttonbackground.png" type="Texture" id=1]
+[ext_resource path="res://ui/MainScreen/button.png" type="Texture" id=2]
+[ext_resource path="res://ui/MainScreen/pressedbutton.png" type="Texture" id=3]
+[ext_resource path="res://background/_Complete_static_BG_(288 x 208).png" type="Texture" id=4]
+[ext_resource path="res://ui/PixelMiddle.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://ui/theme.tres" type="Theme" id=6]
+[ext_resource path="res://ui/PlayButton.gd" type="Script" id=7]
+[ext_resource path="res://ui/QuitButton.gd" type="Script" id=8]
+[ext_resource path="res://audio/PUBG _ Main Theme (2018).mp3" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 2
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -57.0
+margin_top = -72.0
+margin_right = 56.0
+margin_bottom = 130.0
+rect_scale = Vector2( 1.01811, 0.741077 )
+theme = SubResource( 2 )
+
+[node name="ButtonsBackground" type="TextureRect" parent="Menu"]
+margin_right = 113.0
+margin_bottom = 202.0
+texture = ExtResource( 1 )
+
+[node name="PlayButton" type="TouchScreenButton" parent="Menu"]
+position = Vector2( 23.5731, 28.3371 )
+scale = Vector2( 0.719524, 0.797592 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+action = "Join"
+script = ExtResource( 7 )
+
+[node name="PlayText" type="Label" parent="Menu/PlayButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.00012207
+margin_top = -3.05176e-05
+margin_right = 0.00012207
+margin_bottom = -3.05176e-05
+custom_fonts/font = SubResource( 4 )
+text = "Play"
+align = 1
+valign = 1
+
+[node name="OptionsButton" type="TouchScreenButton" parent="Menu"]
+position = Vector2( 23.5731, 68.8188 )
+scale = Vector2( 0.719524, 0.797592 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+action = "Options"
+
+[node name="OptionsText" type="Label" parent="Menu/OptionsButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 5 )
+text = "Options"
+align = 1
+valign = 1
+
+[node name="CreditsButton" type="TouchScreenButton" parent="Menu"]
+position = Vector2( 23.5731, 111.999 )
+scale = Vector2( 0.719524, 0.797592 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+action = "Credits"
+
+[node name="CreditsText" type="Label" parent="Menu/CreditsButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "Credits"
+align = 1
+valign = 1
+
+[node name="QuitButton" type="TouchScreenButton" parent="Menu"]
+position = Vector2( 23.5731, 151.131 )
+scale = Vector2( 0.719524, 0.797592 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+action = "Quit"
+script = ExtResource( 8 )
+
+[node name="QuitText" type="Label" parent="Menu/QuitButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 7 )
+text = "Quit"
+align = 1
+valign = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
+
+[connection signal="released" from="Menu/PlayButton" to="Menu/PlayButton" method="_on_PlayButton_released"]
+[connection signal="released" from="Menu/QuitButton" to="Menu/QuitButton" method="_on_QuitButton_released"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/PUBG _ Main Theme (2018).mp3-7b43c398513e0ae59a20efa454c5882d.mp3str"
+
+[deps]
+
+source_file="res://audio/PUBG _ Main Theme (2018).mp3"
+dest_files=[ "res://.import/PUBG _ Main Theme (2018).mp3-7b43c398513e0ae59a20efa454c5882d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Moaning-Theme-Background-Score-Bgm-Ringtone.mp3-f4a78a4f9fb85cef6d4a48aefe7b5074.mp3str"
+
+[deps]
+
+source_file="res://audio/Moaning-Theme-Background-Score-Bgm-Ringtone.mp3"
+dest_files=[ "res://.import/Moaning-Theme-Background-Score-Bgm-Ringtone.mp3-f4a78a4f9fb85cef6d4a48aefe7b5074.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
